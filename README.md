@@ -11,7 +11,7 @@ If you find a bug, have a question or know how to improve the code, please open 
 Set up a conda environment with `conda env create -f environment.yml`.
 
 ## NePuMoo dataset
-Our novel NePuMoo data set can be downloaded [here](). Unzip and copy the "multiview_cow" folder to `./data/`.
+Our novel NePuMoo data set can be downloaded [here](https://zenodo.org/records/10402817). Unzip and copy the "multiview_cow" folder to `./data/`.
 
 ## Pre-trained weights
 Pre-trained weights for cows (our novel NePuMoo data set), the [Human3.6M dataset](http://vision.imar.ro/human3.6m/description.php), and our ablation studies can be downloaded [here](https://zenodo.org/records/10402116). Unzip and copy the "experiments" folder to `./`.
@@ -85,10 +85,18 @@ To get the global texture embedding for novel views and occlusions, run `get_tex
 ## Training
 
 ### Geometry
+To train the geometry pipeline, run:
+
+    python train.py -exp_name EXP_NAME -cfg_file CFG_FILE -data DATA_TYPE
+
+where `EXP_NAME` is the name of the experiment you choose, `CFG_FILE` is the path to a YAML configuration file, like these [here](https://github.com/urs-waldmann/NeTePu/tree/main/configs), and `DATA_TYPE` can be `cows` or `h36m`.
 
 ### Texture
+To train the texture pipeline, run:
 
-### Human3.6M
+    python train_texture.py -exp_name EXP_NAME -cfg_file CFG_FILE
+
+where the command line arguments are the same as above. You need trained weights of the geometry pipeline for the same articulated shape.
 
 ## Cite us
 
