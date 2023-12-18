@@ -57,3 +57,18 @@ To render multiple novel views of the NePuMoo test set, run:
 where the command line arguments are the same as above.
 
 ### Human3.6M
+**Preliminary tasks**
+
+Clone [this repository](https://github.com/karfly/human36m-camera-parameters) into `./data/h36m/`.
+
+[Download](http://vision.imar.ro/human3.6m/filebrowser.php) and unzip the 3D poses (positions, not angles) of the action "Posing" for all subjects (you need a login to download). If you picked correctly, the folder you downloaded is named "Poses_D3_Positions_Posing". Copy that folder to `.data/h36m/data/`.
+
+We use the processed data from [AniNeRF](https://github.com/zju3dv/animatable_nerf/blob/master/INSTALL.md#set-up-datasets) in `./data/h36m/data/`.
+
+**Novel pose synthesis**
+
+To render multiple views of the Human3.6M test set, run:
+
+    python test_texture.py -exp_name texture_h36m -checkpoint 2080
+
+where the command line arguments are the same as above.
