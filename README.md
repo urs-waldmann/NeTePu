@@ -1,5 +1,5 @@
-# Neural Texture Puppeteer: A Framework for Neural Geometry and Texture Rendering of Articulated Shapes, Enabling Re-Identification at Interactive Speed
-This repository provides code for NeTePu (WACVW "CV4Smalls" 2024, oral).
+# Neural Texture Puppeteer (NeTePu)
+This repository provides code for "Neural Texture Puppeteer: A Framework for Neural Geometry and Texture Rendering of Articulated Shapes, Enabling Re-Identification at Interactive Speed" (WACV Workshop ["CV4Smalls"](https://cv4smalls.sites.northeastern.edu/) 2024, [oral](https://cv4smalls.sites.northeastern.edu/schedule-deadlines/)).
 
 **Abstract**
 
@@ -72,3 +72,22 @@ To render multiple views of the Human3.6M test set, run:
     python test_texture.py -exp_name texture_h36m -checkpoint 2080
 
 where the command line arguments are the same as above.
+
+## Re-identification
+
+## Training
+
+### Geometry
+
+### Texture
+
+### Human3.6M
+
+## Cite us
+
+    @inproceedings{waldmann2023netepu,
+      title={Neural Texture Puppeteer: A Framework for Neural Geometry and Texture Rendering of Articulated Shapes, Enabling Re-Identification at Interactive Speed},
+      author={Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
+      journal={arXiv preprint arXiv:2311.17109},
+      year={2023}
+    }
