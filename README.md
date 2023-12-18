@@ -74,6 +74,13 @@ To render multiple views of the Human3.6M test set, run:
 where the command line arguments are the same as above.
 
 ## Re-identification
+To get the global texture embedding for the known views, run:
+
+    python get_textures.py -exp_name_texture texture_cows -checkpoint_texture 535 -data cows -exp_name_geometry geometry_cows -checkpoint_geometry 1950
+
+where the command line arguments are similar as above.
+
+To get the global texture embedding for novel views and occlusions, run `get_textures_nv.py` and `get_textures_occ.py` respectively instead.
 
 ## Training
 
