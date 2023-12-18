@@ -9,3 +9,51 @@ If you find a bug, have a question or know how to improve the code, please open 
 
 ## Conda environment
 Set up a conda environment with `conda env create -f environment.yml`.
+
+## NePuMoo dataset
+Our novel NePuMoo data set can be downloaded [here](). Unzip and copy the "multiview_cow" folder to `./data/`.
+
+## Pre-trained weights
+Pre-trained weights for cows (our novel NePuMoo data set), the [Human3.6M dataset](http://vision.imar.ro/human3.6m/description.php), and our ablation studies can be downloaded [here](https://zenodo.org/records/10402116). Unzip and copy the "experiments" folder to `./`.
+
+## Rendering
+
+### Geometry
+The pipeline for geometry can render depth maps, masks, and [NNOPCS maps](https://arxiv.org/abs/2311.17109).
+
+**Novel pose synthesis**
+
+To render multiple views of the NePuMoo test set, run:
+
+    python test.py -exp_name geometry_cows -checkpoint 1950
+
+where `-exp_name` specifies the name of the experiment, and `-checkpoint` the epoch of the trained weights.
+
+**Novel pose and view synthesis**
+
+To render multiple novel views of the NePuMoo test set, run:
+
+    python test_nv.py -exp_name geometry_cows -checkpoint 1950 -novel_views_cfg configs/parameters_ref.cfg
+
+where `-novel_views_cfg` specifies the path to the configuration file containing the novel views, and the other command line arguments are the same as above.
+
+### Texture
+The texture pipeline can render color maps.
+
+**Novel pose synthesis**
+
+To render multiple views of the NePuMoo test set, run:
+
+    python test_texture.py -exp_name texture_cows -checkpoint 535
+
+where the command line arguments are the same as above.
+
+**Novel pose and view synthesis**
+
+To render multiple novel views of the NePuMoo test set, run:
+
+    python test_texture_nv.py -exp_name texture_cows -checkpoint 535 -novel_views_cfg configs/parameters_ref.cfg
+
+where the command line arguments are the same as above.
+
+### Human3.6M
