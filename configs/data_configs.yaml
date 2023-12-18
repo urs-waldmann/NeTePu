@@ -1,0 +1,48 @@
+nkps:
+  humans: 33
+  pigeons: 19
+  cows: 25
+  giraffes: 26
+  h36m: 32
+ncams:
+  humans: 24
+  pigeons: 56
+  cows: 24
+  giraffes: 24
+  h36m: 4
+radii:
+  pigeons: 0.175
+  humans: 1.125
+  cows: 1.5
+  giraffes: 3.0
+  h36m: 1.125
+num_datapoints:
+  pigeons: 1450
+  cows: 910
+  giraffes: 1900
+  humans: 3213
+  h36m: 910
+keypoint_noise_augmentation:
+  humans: 0.001
+  pigeons: 0.0005
+  cows: 0.003
+  giraffes: 0.003
+  h36m: 0.001
+boundary_sigma_near:
+  humans: 0.05
+  pigeons: 0.015
+  cows: 0.0125
+  giraffes: 0.015
+  h36m: 0.05
+boundary_sigma_far:
+  humans: 0.175
+  pigeons: 0.15
+  cows: 0.125
+  giraffes: 0.15
+  h36m: 0.175
+VCA_nneigh:
+  humans: 12
+  pigeons: 12
+  cows: 20
+  giraffes: 12
+  h36m: 12

@@ -1,0 +1,23 @@
+encoder:
+  lat_dim: 1024
+decoder:
+  loc_lat_dim: 256
+  type: nepu
+renderer:
+  hidden_dim: 256
+  type: nepu
+training:
+  batch_size: 64
+  ckpt: null
+  grad_clip: 1.0
+  lr: 0.0005
+  weight_decay: 0.005
+  lr_decay_factor: 0.2
+  lr_decay_interval: 500
+  npoints_renderer: 1500
+  npoints_object_renderer: 500
+  weight_color_loss: 5
+  weight_KLD_loss: 0.00000001
+geometry:
+  exp_name: 'geometry_cows'
+  checkpoint: 1950

@@ -1,0 +1,25 @@
+encoder:
+  lat_dim: 1024
+  loc_lat_dim: 256
+  nfinal_trans: 4
+decoder:
+  kps_bottle: 128
+  type: nepu
+renderer:
+  hidden_dim: 256
+  type: nepu
+training:
+  batch_size: 64
+  ckpt: null
+  grad_clip: 1.0
+  lr: 0.0005
+  weight_decay: 0.005
+  lr_decay_factor: 0.2
+  lr_decay_interval: 500
+  npoints_renderer: 1500
+  npoints_object_renderer: 500
+  weight_sil_loss: 3
+  weight_kpts_loss: 2
+  weight_depth_loss: 1
+  weight_reg_loss: 0.0625
+  weight_pos_enc_loss: 1
