@@ -101,8 +101,10 @@ where the command line arguments are the same as above. You need trained weights
 ## Cite us
 
     @inproceedings{waldmann2023netepu,
-      title={Neural Texture Puppeteer: A Framework for Neural Geometry and Texture Rendering of Articulated Shapes, Enabling Re-Identification at Interactive Speed},
-      author={Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
-      journal={arXiv preprint arXiv:2311.17109},
-      year={2023}
+      title     = {Neural Texture Puppeteer: A Framework for Neural Geometry and Texture Rendering of Articulated Shapes, Enabling Re-Identification at Interactive Speed},
+      author    = {Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
+      booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},
+      month     = {January},
+      year      = {2024},
+      pages     = {69-79}
     }
